@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembaga Penyelenggara Negara - Materi Lengkap</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Config Warna -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        pancasila: {
+                            green: '#15803d',
+                            lightGreen: '#dcfce7',
+                            yellow: '#facc15',
+                            cream: '#fefce8',
+                            dark: '#052e16'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animasi */
+        .fade-in-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .tab-content { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        html { scroll-behavior: smooth; }
+        
+        /* Formatting untuk Teks Panjang (Materi Lengkap) */
+        .materi-full-text p { margin-bottom: 1rem; line-height: 1.8; text-align: justify; }
+        .materi-full-text h3 { font-size: 1.25rem; font-weight: 700; color: #15803d; margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 2px solid #facc15; padding-bottom: 0.25rem; display: inline-block; }
+        .materi-full-text h4 { font-size: 1.1rem; font-weight: 600; color: #0f172a; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .materi-full-text ul, .materi-full-text ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .materi-full-text ul { list-style-type: disc; }
+        .materi-full-text ol { list-style-type: decimal; }
+        .materi-full-text li { margin-bottom: 0.5rem; }
+        .pasal-tag { background-color: #fefce8; border: 1px solid #facc15; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 0.85em; color: #854d0e; margin-right: 5px; }
+    </style>
+</head>
+<body class="bg-pancasila-cream text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-pancasila-yellow/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="ph-fill ph-bank text-3xl text-pancasila-green"></i>
+                    <span class="font-bold text-xl text-pancasila-dark tracking-tight">PilarNegara</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-pancasila-green font-medium transition">Beranda</a>
+                    <a href="#materi" class="text-gray-600 hover:text-pancasila-green font-medium transition">Ringkasan</a>
+                    <a href="#pengayaan" class="text-gray-600 hover:text-pancasila-green font-medium transition">Materi Lengkap</a>
+                    <a href="#kuis" class="text-gray-600 hover:text-pancasila-green font-medium transition">Kuis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-28 pb-20 px-4 bg-gradient-to-br from-green-50 to-yellow-50 overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6 fade-in-up">
+                <span class="inline-block px-4 py-1 rounded-full bg-pancasila-lightGreen text-pancasila-green font-semibold text-sm border border-green-200">
+                    Materi Pancasila Kelas VIII
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-pancasila-dark leading-tight">
+                    Lembaga <span class="text-pancasila-green">Penyelenggara</span> <br>
+                    Negara
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Pelajari fungsi dan wewenang lembaga legislatif, eksekutif, dan yudikatif untuk menjaga Indonesia tetap aman, adil, dan tertib.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#materi" class="px-8 py-3 bg-pancasila-green text-white rounded-full font-bold shadow-lg hover:bg-green-800 hover:scale-105 transition transform">
+                        Mulai Belajar
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in-up relative">
+                <div class="absolute inset-0 bg-yellow-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                <div class="relative bg-white p-4 rounded-2xl shadow-2xl border-4 border-pancasila-yellow/30 transform rotate-2 hover:rotate-0 transition duration-500">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Istana_Negara%2C_2023_%28Istana_Kepresidenan_Republik_Indonesia%29.jpg" alt="Istana Negara" class="rounded-xl w-full h-64 object-cover">
+                   <div class="absolute -bottom-6 -right-6 bg-pancasila-yellow text-pancasila-dark p-4 rounded-xl shadow-lg font-bold">
+                        🏛️ Trias Politica
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tujuan Pembelajaran -->
+    <section id="tujuan" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl font-bold text-pancasila-dark">Tujuan Pembelajaran</h2>
+                <div class="w-20 h-1 bg-pancasila-yellow mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-pancasila-cream rounded-2xl border border-yellow-200 hover:shadow-xl transition fade-in-up">
+                    <div class="w-12 h-12 bg-green-100 text-pancasila-green rounded-full flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-magnifying-glass"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Menganalisis</h3>
+                    <p class="text-gray-600">Menganalisis lembaga-lembaga penyelenggara negara sesuai fungsinya.</p>
+                </div>
+                <div class="p-6 bg-pancasila-cream rounded-2xl border border-yellow-200 hover:shadow-xl transition fade-in-up" style="animation-delay: 0.1s">
+                    <div class="w-12 h-12 bg-green-100 text-pancasila-green rounded-full flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-chalkboard-teacher"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Menjelaskan</h3>
+                    <p class="text-gray-600">Menjelaskan fungsi dan wewenang masing-masing lembaga negara.</p>
+                </div>
+                <div class="p-6 bg-pancasila-cream rounded-2xl border border-yellow-200 hover:shadow-xl transition fade-in-up" style="animation-delay: 0.2s">
+                    <div class="w-12 h-12 bg-green-100 text-pancasila-green rounded-full flex items-center justify-center mb-4 text-2xl"><i class="ph-fill ph-shield-check"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Memahami</h3>
+                    <p class="text-gray-600">Memahami pentingnya lembaga ini demi keamanan dan keadilan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trias Politica (Interactive Tabs - Ringkasan) -->
+    <section id="materi" class="py-20 bg-yellow-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10 fade-in-up">
+                <span class="text-pancasila-green font-bold tracking-wider uppercase text-sm">Ringkasan Materi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-pancasila-dark mt-2">Pembagian Kekuasaan</h2>
+                <p class="text-gray-600 mt-3">Klik tombol di bawah untuk melihat konsep dasar.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8 fade-in-up">
+                <button onclick="switchTab('legislatif')" id="btn-legislatif" class="tab-btn active px-6 py-3 rounded-full font-bold shadow-sm transition-all bg-pancasila-green text-white ring-4 ring-green-200">Legislatif</button>
+                <button onclick="switchTab('eksekutif')" id="btn-eksekutif" class="tab-btn px-6 py-3 rounded-full font-bold shadow-sm transition-all bg-white text-gray-600 hover:bg-green-50">Eksekutif</button>
+                <button onclick="switchTab('yudikatif')" id="btn-yudikatif" class="tab-btn px-6 py-3 rounded-full font-bold shadow-sm transition-all bg-white text-gray-600 hover:bg-green-50">Yudikatif</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 min-h-[300px] relative fade-in-up">
+                <!-- Legislatif -->
+                <div id="content-legislatif" class="tab-content active">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 flex justify-center"><div class="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center text-blue-600"><i class="ph-fill ph-scroll text-6xl"></i></div></div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-pancasila-dark mb-2">Legislatif</h3>
+                            <p class="text-sm text-blue-600 font-bold mb-4 uppercase tracking-wide">Pembuat Aturan</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Kekuasaan untuk <strong>membuat peraturan perundang-undangan</strong>. Contoh: MPR, DPR, DPD.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Eksekutif -->
+                <div id="content-eksekutif" class="tab-content hidden">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 flex justify-center"><div class="w-32 h-32 bg-red-100 rounded-full flex items-center justify-center text-red-600"><i class="ph-fill ph-flag text-6xl"></i></div></div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-pancasila-dark mb-2">Eksekutif</h3>
+                            <p class="text-sm text-red-600 font-bold mb-4 uppercase tracking-wide">Pelaksana Aturan</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Kekuasaan untuk <strong>menjalankan pemerintahan</strong>. Contoh: Presiden, Wapres, Menteri.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Yudikatif -->
+                <div id="content-yudikatif" class="tab-content hidden">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 flex justify-center"><div class="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center text-pancasila-green"><i class="ph-fill ph-scales text-6xl"></i></div></div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold text-pancasila-dark mb-2">Yudikatif</h3>
+                            <p class="text-sm text-green-600 font-bold mb-4 uppercase tracking-wide">Penegak Hukum</p>
+                            <p class="text-gray-700 leading-relaxed mb-4">Kekuasaan untuk <strong>mengadili pelanggaran</strong>. Contoh: MA, MK, KY.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MATERI LENGKAP & DETAIL (ACCORDION FULL TEXT) -->
+    <section id="pengayaan" class="py-16 bg-white border-t-2 border-dashed border-pancasila-green/30">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-8 fade-in-up">
+                <span class="bg-green-100 text-pancasila-green px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide shadow-sm">Materi Lengkap</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-3">Pembahasan Detail</h2>
+                <p class="text-gray-500 mt-2">Klik panel di bawah untuk membaca materi lengkap (Sesuai Sumber Asli).</p>
+            </div>
+
+            <div class="space-y-6 fade-in-up">
+                
+                <!-- 1. FULL TEXT LEGISLATIF -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <button onclick="toggleAccordion('detail-legislatif')" class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-blue-50 transition text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl"><i class="ph-bold ph-book-open"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Lembaga Legislatif (Detail Lengkap)</h3>
+                                <p class="text-sm text-gray-500">Dewan Perwakilan Rakyat, Fungsi, dan Wewenang</p>
+                            </div>
+                        </div>
+                        <i class="ph-bold ph-caret-down text-gray-400 text-xl"></i>
+                    </button>
+                    <!-- KONTEN ASLI TANPA RINGKASAN -->
+                    <div id="detail-legislatif" class="hidden p-8 bg-white text-gray-700 materi-full-text border-t border-gray-100">
+                        <h3>1. Definisi dan Peran Utama</h3>
+                        <p>Lembaga legislatif adalah lembaga yang memiliki wewenang untuk menetapkan ketentuan hukum atau undang-undang. Dalam ketatanegaraan, lembaga legislatif memegang peran sentral sebagai pembuat kebijakan yang kemudian akan dilaksanakan langsung oleh lembaga eksekutif. Hubungan ini memastikan program pemerintahan berjalan sesuai arah pembangunan nasional.</p>
+
+                        <h3>2. Fungsi Legislasi (Pembentukan Undang-Undang)</h3>
+                        <p>Fungsi utama lembaga legislatif, khususnya Dewan Perwakilan Rakyat (DPR), adalah membentuk undang-undang bersama Presiden.</p>
+                        <ul>
+                            <li><strong>Perancangan:</strong> DPR memiliki peran bersama Presiden dalam merancang dan mengusulkan Rancangan Undang-Undang (RUU) sebelum disahkan menjadi Undang-Undang (UU).</li>
+                            <li><strong>Pembahasan:</strong> Presiden berhak mengajukan RUU kepada DPR. RUU tersebut kemudian dibahas untuk mendapatkan persetujuan bersama.</li>
+                            <li><strong>Pengesahan:</strong> Setelah RUU disetujui bersama oleh DPR dan Presiden, Presiden mengesahkannya menjadi undang-undang.</li>
+                        </ul>
+
+                        <h3>3. Fungsi Anggaran (APBN)</h3>
+                        <p>Lembaga legislatif memegang peran krusial dalam penetapan anggaran negara.</p>
+                        <ul>
+                            <li><strong>Pembahasan APBN:</strong> Pemerintah (Eksekutif) menyusun Rancangan Anggaran Pendapatan dan Belanja Negara (RAPBN) yang kemudian diajukan kepada DPR untuk dibahas dan disetujui.</li>
+                            <li><strong>Persetujuan:</strong> Jika DPR menyetujui, anggaran tersebut dilaksanakan oleh eksekutif. Namun, apabila DPR tidak menyetujui rancangan anggaran yang diajukan, pemerintah harus menjalankan APBN tahun lalu.</li>
+                        </ul>
+
+                        <h3>4. Wewenang Pengawasan dan Pertimbangan</h3>
+                        <p>DPR memiliki wewenang untuk memberikan persetujuan dan pertimbangan terhadap berbagai kebijakan strategis yang diambil oleh Presiden (Eksekutif) maupun terkait Lembaga Yudikatif.</p>
+                        
+                        <h4>Dalam Hubungan Luar Negeri & Pertahanan:</h4>
+                        <ul>
+                            <li><strong>Perang dan Perdamaian:</strong> Presiden harus mendapatkan persetujuan DPR untuk menyatakan perang, membuat perdamaian, dan perjanjian dengan negara lain.</li>
+                            <li><strong>Perjanjian Internasional:</strong> Perjanjian internasional yang menimbulkan akibat luas dan mendasar bagi kehidupan rakyat harus mendapat persetujuan DPR.</li>
+                            <li><strong>Duta Besar:</strong> Dalam mengangkat duta dan konsul, serta menerima duta negara lain, Presiden harus memperhatikan pertimbangan DPR.</li>
+                        </ul>
+
+                        <h4>Dalam Bidang Hukum dan Yudikatif:</h4>
+                        <ul>
+                            <li><strong>Amnesti dan Abolisi:</strong> Presiden memberi amnesti dan abolisi dengan memperhatikan pertimbangan DPR.</li>
+                            <li><strong>Pengangkatan Komisi Yudisial:</strong> Anggota Komisi Yudisial (KY) diangkat dan diberhentikan oleh Presiden dengan persetujuan DPR.</li>
+                            <li><strong>Impeachment (Pemakzulan):</strong> DPR memiliki wewenang untuk mengeluarkan pendapat mengenai dugaan pelanggaran hukum oleh Presiden/Wakil Presiden (seperti pengkhianatan negara, korupsi, dll), yang kemudian akan diputuskan oleh Mahkamah Konstitusi.</li>
+                        </ul>
+
+                        <h3>5. Hubungan dengan Lembaga Yudikatif</h3>
+                        <p>Posisi lembaga legislatif diawasi oleh mekanisme <em>checks and balances</em> melalui lembaga yudikatif:</p>
+                        <ul>
+                            <li><strong>Pengujian Undang-Undang (Judicial Review):</strong> Mahkamah Konstitusi (MK) berwenang menguji undang-undang (produk lembaga legislatif) terhadap UUD 1945. MK dapat membatalkan atau mengubah makna sebuah undang-undang jika bertentangan dengan konstitusi.</li>
+                            <li><strong>Kemandirian:</strong> Kekuasaan kehakiman (Yudikatif) adalah kekuasaan yang merdeka dan bebas dari pengaruh kekuasaan lembaga legislatif.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. FULL TEXT EKSEKUTIF -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <button onclick="toggleAccordion('detail-eksekutif')" class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-red-50 transition text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xl"><i class="ph-bold ph-flag"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Lembaga Eksekutif (Detail Lengkap)</h3>
+                                <p class="text-sm text-gray-500">Presiden, Wakil Presiden, Kementerian, dan LPNK</p>
+                            </div>
+                        </div>
+                        <i class="ph-bold ph-caret-down text-gray-400 text-xl"></i>
+                    </button>
+                    <!-- KONTEN ASLI -->
+                    <div id="detail-eksekutif" class="hidden p-8 bg-white text-gray-700 materi-full-text border-t border-gray-100">
+                        <h3>Fungsi dan Peran Lembaga Eksekutif</h3>
+                        <p>Lembaga eksekutif merupakan organ negara yang memegang kekuasaan pemerintahan sebagaimana diatur dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945. Fungsi utama lembaga ini adalah melaksanakan undang-undang dan menjalankan kebijakan pemerintahan dalam berbagai bidang kehidupan berbangsa dan bernegara. Dalam konteks tersebut, eksekutif menjadi pelaksana langsung dari ketentuan hukum yang telah ditetapkan oleh lembaga legislatif, sehingga seluruh program dan kegiatan pemerintahan dapat berjalan sesuai dengan arah pembangunan nasional.</p>
+                        <p>Selain sebagai pelaksana undang-undang, lembaga eksekutif memiliki peran strategis dalam merumuskan dan menetapkan kebijakan publik. Presiden bersama para menteri menyusun kebijakan yang berkaitan dengan sektor ekonomi, sosial, pendidikan, kesehatan, pertahanan, keamanan, dan berbagai urusan pemerintahan lainnya. Kebijakan tersebut disusun untuk menjawab kebutuhan masyarakat serta menangani permasalahan nasional sehingga tercipta tata kelola pemerintahan yang efektif dan responsif.</p>
+                        <p>Dalam menjalankan perannya, lembaga eksekutif juga bertanggung jawab terhadap pengelolaan administrasi pemerintahan. Pengelolaan tersebut meliputi penyelenggaraan pelayanan publik, perencanaan program kerja, penggunaan anggaran, dan koordinasi antarinstansi pemerintah. Melalui fungsi administrasi ini, eksekutif memastikan bahwa jalannya pemerintahan berlangsung secara tertib, terarah, dan efisien.</p>
+                        <p>Lembaga eksekutif juga memiliki kewenangan dalam bidang hubungan luar negeri. Presiden, sebagai kepala negara, mewakili Indonesia dalam menjalin kerja sama internasional, menandatangani perjanjian bilateral maupun multilateral, serta melakukan diplomasi untuk kepentingan nasional. Peran ini penting untuk memperkuat posisi Indonesia dalam komunitas global. Dalam sektor pertahanan dan keamanan, Presiden memegang kedudukan sebagai panglima tertinggi Tentara Nasional Indonesia. Dengan kedudukan tersebut, eksekutif bertanggung jawab dalam menentukan kebijakan pertahanan negara serta memastikan keamanan nasional tetap terjaga. Selain itu, eksekutif memiliki kewenangan untuk mengangkat dan memberhentikan pejabat negara, khususnya para menteri dan pimpinan lembaga pemerintah. Kewenangan ini diperlukan untuk menjamin efektivitas pemerintahan dan kelancaran pelaksanaan kebijakan. Di samping itu, lembaga eksekutif berperan dalam penyusunan dan pelaksanaan Anggaran Pendapatan dan Belanja Negara (APBN). Pemerintah menyusun Rancangan APBN yang kemudian diajukan kepada DPR untuk dibahas dan disetujui. Setelah disahkan, eksekutif bertanggung jawab atas pelaksanaan anggaran tersebut sesuai dengan prioritas pembangunan nasional.</p>
+
+                        <h3>Fungsi Lembaga Eksekutif</h3>
+                        <p>Sebagai kepala pemerintahan sekaligus kepala negara, presiden memiliki sejumlah fungsi dan kewenangan yang mencakup berbagai bidang:</p>
+                        <ul>
+                            <li><strong>Bidang Administratif:</strong> Melaksanakan undang-undang dan peraturan lainnya, serta mengatur jalannya administrasi pemerintahan agar berjalan efisien dan tertib.</li>
+                            <li><strong>Bidang Legislatif:</strong> Bersama DPR, presiden memiliki peran dalam merancang dan mengusulkan rancangan undang-undang (RUU) sebelum disahkan menjadi UU.</li>
+                            <li><strong>Bidang Keamanan dan Pertahanan:</strong> Mengatur angkatan bersenjata, menjaga keamanan nasional, dan memastikan pertahanan negara berjalan optimal. Presiden juga memiliki wewenang tertinggi dalam urusan militer dan kepolisian.</li>
+                            <li><strong>Bidang Yudikatif:</strong> Dapat memberikan grasi, amnesti, abolisi, dan rehabilitasi sesuai dengan ketentuan undang-undang, sebagai bentuk pengampunan atau pemulihan hak warga negara.</li>
+                            <li><strong>Bidang Diplomatik:</strong> Menjalin hubungan luar negeri, menandatangani perjanjian internasional, dan mewakili Indonesia dalam pertemuan diplomatik dunia.</li>
+                        </ul>
+                        <p>Lembaga eksekutif di Indonesia terdiri dari Presiden, Wakil Presiden, kementerian negara, dan lembaga pemerintah non-kementerian.</p>
+
+                        <h3>Tugas dan Wewenang Presiden RI Menurut UUD 1945</h3>
+                        <p>Presiden RI memiliki peran ganda sebagai Kepala Negara dan Kepala Pemerintahan. Sebagai pemegang mandat konstitusi, Presiden Republik Indonesia menjalankan dua peran sekaligus yaitu kepala negara (simbol pemersatu bangsa) dan kepala pemerintahan (pelaksana kebijakan negara). Hal ini tertuang dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 Pasal 4 Ayat (1) yang berbunyi “Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar."</p>
+
+                        <h4>1. Peran sebagai Kepala Negara</h4>
+                        <p>Peran presiden sebagai kepala negara tercermin dari tugasnya menjadi simbol resmi dan pemersatu bangsa Indonesia. Tugas dan wewenangnya meliputi:</p>
+                        <ul>
+                            <li><strong>Memegang kekuasaan tertinggi atas Angkatan Bersenjata:</strong> <span class="pasal-tag">Pasal 10</span> "Presiden memegang kekuasaan yang tertinggi atas Angkatan Darat, Angkatan Laut dan Angkatan Udara."</li>
+                            <li><strong>Menjalankan hubungan luar negeri:</strong> <span class="pasal-tag">Pasal 11 Ayat (1)</span> "Presiden dengan persetujuan Dewan Perwakilan Rakyat menyatakan perang, membuat perdamaian dan perjanjian dengan negara lain."</li>
+                            <li><strong>Memberi pengampunan dan rehabilitasi:</strong> <span class="pasal-tag">Pasal 14 Ayat (1)</span> "Presiden memberi grasi dan rehabilitasi dengan memperhatikan pertimbangan Mahkamah Agung." <span class="pasal-tag">Pasal 14 Ayat (2)</span> "Presiden memberi amnesti dan abolisi dengan memperhatikan pertimbangan Dewan Perwakilan Rakyat."</li>
+                            <li><strong>Memberi gelar dan tanda kehormatan:</strong> <span class="pasal-tag">Pasal 15</span> "Presiden memberi gelar, tanda jasa, dan lain-lain tanda kehormatan yang diatur dengan undang-undang."</li>
+                        </ul>
+
+                        <h4>2. Peran sebagai Kepala Pemerintahan</h4>
+                        <p>Sebagai pemegang kekuasaan eksekutif, berikut adalah rincian tugas dan wewenang Presiden:</p>
+                        <ul>
+                            <li><strong>Memegang kekuasaan pemerintahan:</strong> <span class="pasal-tag">Pasal 4 Ayat (1)</span> "Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar."</li>
+                            <li><strong>Membentuk undang-undang dan peraturan:</strong> <span class="pasal-tag">Pasal 5 Ayat (1)</span> "Presiden berhak mengajukan rancangan undang-undang kepada Dewan Perwakilan Rakyat."</li>
+                            <li><strong>Mengangkat dan memberhentikan menteri:</strong> <span class="pasal-tag">Pasal 17 Ayat (2)</span> "Menteri-menteri itu diangkat dan diberhentikan oleh Presiden."</li>
+                            <li><strong>Menetapkan peraturan darurat:</strong> <span class="pasal-tag">Pasal 22 Ayat (1)</span> "Dalam hal ihwal kegentingan yang memaksa, Presiden berhak menetapkan peraturan pemerintah sebagai pengganti undang-undang."</li>
+                            <li><strong>Mengajukan dan menjalankan anggaran:</strong> <span class="pasal-tag">Pasal 23 Ayat (2)</span> "Rancangan undang-undang anggaran pendapatan dan belanja negara diajukan oleh Presiden untuk dibahas bersama Dewan Perwakilan Rakyat."</li>
+                        </ul>
+
+                        <h3>Tugas dan Wewenang Wakil Presiden Menurut UUD 1945</h3>
+                        <p>Wakil Presiden merupakan unsur penting dalam lembaga eksekutif yang bertugas mendampingi Presiden dalam menjalankan pemerintahan negara. Secara konstitusional, Wakil Presiden menjalankan dua fungsi utama:</p>
+                        <ol>
+                            <li><strong>Sebagai pembantu Presiden:</strong> Wakil Presiden bertugas mendukung seluruh pelaksanaan kewenangan Presiden di bidang eksekutif. Fungsi ini sejalan dengan ketentuan Pasal 4 Ayat (2) UUD 1945.</li>
+                            <li><strong>Sebagai pejabat yang menggantikan Presiden:</strong> Apabila Presiden berhalangan. Ketentuan mengenai penggantian ini diatur secara jelas dalam Pasal 8 Ayat (1) UUD 1945.</li>
+                        </ol>
+                        <p>Dalam pelaksanaan pemerintahan sehari-hari, Wakil Presiden juga menjalankan tugas koordinatif, seperti mengawasi jalannya program prioritas nasional, memimpin rapat lintas kementerian apabila mendapat mandat, serta mewakili Presiden dalam berbagai kegiatan kenegaraan di dalam maupun luar negeri.</p>
+
+                        <h3>Kementerian Negara</h3>
+                        <p>Kementerian negara itu sebenarnya bagian dari pemerintah yang tugasnya membantu presiden ngurus berbagai urusan negara yang luas banget. Karena presiden nggak mungkin meng-handle semuanya sendirian, maka setiap bidang penting dibagi ke rumahnya masing-masing, dan rumah itulah yang disebut kementerian.</p>
+                        <p>Fungsi kementerian ini muncul karena negara sebesar Indonesia perlu pembagian kerja yang jelas supaya pemerintahan berjalan efektif. Di lembaga eksekutif, kementerian ini menjalankan peran yang sangat besar karena dari sinilah segala kebijakan presiden diterjemahkan menjadi langkah-langkah yang lebih nyata. Kementerian bekerja mulai dari proses yang paling dasar, yaitu membantu presiden menyusun arah kebijakan, memastikan kebijakan itu dijalankan, melakukan koordinasi, hingga memberikan layanan publik secara langsung.</p>
+                        <p><strong>Daftar Kementerian Saat Ini (Contoh):</strong> Kementerian Dalam Negeri, Kementerian Luar Negeri, Kementerian Pertahanan, Kementerian Hukum dan HAM, Kementerian Keuangan, Kemendikbud Ristek, Kementerian Kesehatan, Kementerian Sosial, dll.</p>
+
+                        <h3>Lembaga Pemerintah Non-Kementerian (LPNK)</h3>
+                        <p>Lembaga Pemerintah Non-Kementerian atau yang sering disingkat LPNK adalah lembaga-lembaga negara yang tetap berada di bawah presiden, tetapi tidak masuk ke dalam struktur kementerian. Mereka adalah lembaga “spesialis” yang mengurusi hal-hal teknis, penelitian, pengawasan, intelijen, administrasi tertentu, atau urusan strategis negara yang membutuhkan penanganan lebih fokus.</p>
+                        <p>Contoh sederhana: data statistik yang kita lihat setiap tahun dikeluarkan oleh Badan Pusat Statistik (BPS). Lalu obat yang kita minum, makanan yang kita makan, diperiksa oleh Badan Pengawas Obat dan Makanan (BPOM). LPNK punya hubungan yang fleksibel dengan kementerian dan sering berkolaborasi.</p>
+                    </div>
+                </div>
+
+                <!-- 3. FULL TEXT YUDIKATIF -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <button onclick="toggleAccordion('detail-yudikatif')" class="w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-green-50 transition text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl"><i class="ph-bold ph-scales"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Lembaga Yudikatif (Detail Lengkap)</h3>
+                                <p class="text-sm text-gray-500">MA, MK, KY, dan Kekuasaan Kehakiman</p>
+                            </div>
+                        </div>
+                        <i class="ph-bold ph-caret-down text-gray-400 text-xl"></i>
+                    </button>
+                    <!-- KONTEN ASLI -->
+                    <div id="detail-yudikatif" class="hidden p-8 bg-white text-gray-700 materi-full-text border-t border-gray-100">
+                        <h3>Lembaga Yudikatif</h3>
+                        <p>Lembaga yudikatif merupakan sebuah lembaga pemerintahan yang fungsinya mengawasi penerapan UUD dan hukum yang berlaku di sebuah negara. Lembaga Yudikatif memegang Kekuasaan Kehakiman, yaitu fungsi fundamental dalam negara untuk menegakkan hukum dan keadilan melalui mekanisme peradilan yang bebas dan mandiri. Dalam konteks Indonesia, kekuasaan ini dijamin oleh Pasal 24 UUD 1945 sebagai kekuasaan yang merdeka, artinya bebas dari intervensi dan pengaruh cabang kekuasaan lain (eksekutif dan legislatif).</p>
+
+                        <h3>Mahkamah Agung (MA): Fungsi dan Kewenangan Utama</h3>
+                        <p>Mahkamah Agung (MA) adalah lembaga peradilan negara tertinggi di Indonesia yang membawahi lingkungan peradilan umum, agama, militer, dan tata usaha negara. Tugas utamanya adalah memeriksa dan memutuskan perkara kasasi, menguji peraturan di bawah undang-undang, serta membina keseragaman penerapan hukum di seluruh wilayah Indonesia. MA bekerja secara independen dari pengaruh pemerintah dan cabang kekuasaan lainnya.</p>
+                        <p><strong>Tugas dan wewenang utama:</strong></p>
+                        <ul>
+                            <li><strong>Pengadilan kasasi:</strong> Memeriksa ulang putusan dari pengadilan di bawahnya untuk memastikan keadilan dan kesesuaian dengan hukum.</li>
+                            <li><strong>Pengujian peraturan:</strong> Menguji peraturan perundang-undangan yang berada di bawah undang-undang terhadap undang-undang itu sendiri.</li>
+                            <li><strong>Peninjauan kembali:</strong> Memutus permohonan peninjauan kembali atas putusan yang sudah memiliki kekuatan hukum tetap.</li>
+                            <li><strong>Penyelesaian sengketa:</strong> Menyelesaikan sengketa kewenangan mengadili antar pengadilan.</li>
+                            <li><strong>Pemberian nasihat:</strong> Memberikan nasihat hukum kepada Presiden dalam rangka pemberian atau penolakan grasi.</li>
+                        </ul>
+
+                        <h3>Mahkamah Konstitusi (MK): Peran sebagai Penjaga Konstitusi</h3>
+                        <p>Mahkamah Konstitusi (MK) merupakan lembaga baru hasil amandemen UUD 1945, didirikan untuk menjaga konstitusi. Kewenangan utamanya meliputi pengujian undang-undang terhadap UUD (judicial review), memutus sengketa kewenangan antarlembaga negara, memutus pembubaran partai politik, dan memutus perselisihan hasil pemilihan umum. Peran judicial review adalah yang paling strategis; melalui putusannya, MK dapat membatalkan atau mengubah makna sebuah undang-undang yang bertentangan dengan hak-hak konstitusional warga negara atau prinsip dasar negara, sehingga MK sering disebut sebagai The Guardian of the Constitution.</p>
+                        <p><strong>Tugas Dan Wewenang Mahkamah Konstitusi:</strong></p>
+                        <ul>
+                            <li>Mengadili pada tingkat pertama dan terakhir yang putusannya bersifat final untuk menguji undang-undang terhadap undang-undang dasar 1945 (UUD 1945).</li>
+                            <li>Memutuskan sengketa kewenangan lembaga negara yang kewenangannya diberikan oleh undang-undang dasar 1945.</li>
+                            <li>Memutuskan pembubaran partai politik.</li>
+                            <li>Memutus perselisihan tentang hasil pemilihan umum.</li>
+                        </ul>
+                        <p>Selain itu, Mahkamah Konstitusi juga memiliki kewajiban memberikan putusan atas pendapat DPR mengenai dugaan pelanggaran oleh presiden dan/atau wakil presiden menurut UUD 1945.</p>
+
+                        <h3>Komisi Yudisial (KY): Fungsi Pengawasan</h3>
+                        <p>Komisi Yudisial (KY) Menurut UUD 1945 Komisi Yudisial adalah lembaga negara yang bersifat mandiri yang berwenang mengusulkan pengangkatan hakim agung dan mempunyai wewenang lain dalam rangka menjaga dan menegakkan kehormatan, keluhuran martabat, serta perilaku hakim.</p>
+                        <p>KY berfungsi sebagai mekanisme pengawasan eksternal untuk memastikan bahwa para hakim bertindak secara profesional dan beretika. Keberadaan KY mencegah potensi penyalahgunaan kekuasaan yudikatif dan menjaga kepercayaan publik terhadap sistem peradilan. Anggota Komisi Yudisial diangkat dan diberhentikan oleh presiden dengan persetujuan Dewan Perwakilan Rakyat.</p>
+                        <p><strong>Tugas dan wewenang Komisi Yudisial:</strong></p>
+                        <ul>
+                            <li>Mengawasi perilaku hakim</li>
+                            <li>Mengusulkan hakim agung</li>
+                            <li>Menjaga kehormatan hakim</li>
+                        </ul>
+
+                        <h3>Sinergi dan Isu Kontrol</h3>
+                        <p>Sinergi antara MA, MK, dan KY sangat krusial. MA dan MK menegakkan hukum dan konstitusi, sementara KY menegakkan etika pelaksana hukum (hakim). Meskipun ketiganya independen, isu utama dalam sistem yudikatif adalah koordinasi dan potensi konflik kewenangan. Jika tidak ada mekanisme kontrol internal yang kuat di dalam MA dan MK, kemerdekaan kekuasaan kehakiman dapat disalahgunakan, yang justru melemahkan keadilan dan akuntabilitas publik.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ / LATIHAN SOAL (10 Soal Lengkap) -->
+    <section id="kuis" class="py-16 bg-pancasila-dark text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10 fade-in-up">
+                <span class="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Tugas Individu</span>
+                <h2 class="text-3xl font-bold mt-2">Quiz!</h2>
+                <p class="text-gray-300 mt-2">Bacalah soal uraian di bawah ini, kerjakan di selembar kertas dengan bahasamu sendiri!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 fade-in-up">
+                <!-- Soal 1 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 1</span>
+                    <p class="text-gray-200 text-sm">Jelaskan perbedaan fungsi lembaga legislatif, eksekutif, dan yudikatif dalam sistem pemerintahan Indonesia!</p>
+                </div>
+                <!-- Soal 2 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 2</span>
+                    <p class="text-gray-200 text-sm">Mengapa keberadaan lembaga yudikatif seperti MA dan MK sangat penting dalam menjaga keadilan dan supremasi hukum di Indonesia? Jelaskan pendapatmu!</p>
+                </div>
+                <!-- Soal 3 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 3</span>
+                    <p class="text-gray-200 text-sm">Sebutkan dan jelaskan tiga wewenang utama DPR dalam menjalankan fungsinya sebagai lembaga legislatif!</p>
+                </div>
+                <!-- Soal 4 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 4</span>
+                    <p class="text-gray-200 text-sm">Jelaskan hubungan antara Presiden dan DPR dalam proses pembentukan undang-undang!</p>
+                </div>
+                <!-- Soal 5 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 5</span>
+                    <p class="text-gray-200 text-sm">Mengapa DPD dikatakan sebagai lembaga yang mewakili kepentingan daerah? Berikan penjelasan dan contohnya!</p>
+                </div>
+                <!-- Soal 6 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 6</span>
+                    <p class="text-gray-200 text-sm">Apa tugas utama BPK, dan mengapa lembaga ini harus bersifat independen? Jelaskan!</p>
+                </div>
+                <!-- Soal 7 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 7</span>
+                    <p class="text-gray-200 text-sm">Jelaskan secara singkat bagaimana proses pemilihan Presiden dan Wakil Presiden di Indonesia!</p>
+                </div>
+                <!-- Soal 8 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 8</span>
+                    <p class="text-gray-200 text-sm">Menurutmu, apa yang terjadi jika salah satu lembaga negara tidak menjalankan tugasnya dengan baik? Berikan contoh kasus atau kemungkinan dampaknya!</p>
+                </div>
+                <!-- Soal 9 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 9</span>
+                    <p class="text-gray-200 text-sm">MPR memiliki kewenangan untuk mengubah dan menetapkan UUD 1945. Jelaskan mengapa kewenangan ini sangat penting bagi kehidupan bernegara!</p>
+                </div>
+                <!-- Soal 10 -->
+                <div class="bg-white/10 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <span class="text-yellow-400 font-bold text-lg mb-1 block">Soal 10</span>
+                    <p class="text-gray-200 text-sm">Berikan pendapatmu tentang bagaimana lembaga negara dapat bekerja sama untuk mewujudkan pemerintahan yang demokratis dan berpihak pada rakyat!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 text-center border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="font-bold text-xl mb-2">PilarNegara</p>
+            <p class="text-gray-500 text-sm">Materi Pendidikan Pancasila Kelas VIII - SMP/MTs</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        function switchTab(tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => { c.classList.add('hidden'); c.classList.remove('active'); });
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('bg-pancasila-green', 'text-white', 'ring-4', 'ring-green-200');
+                b.classList.add('bg-white', 'text-gray-600', 'hover:bg-green-50');
+            });
+            document.getElementById(`content-${tabName}`).classList.remove('hidden');
+            document.getElementById(`content-${tabName}`).classList.add('active');
+            document.getElementById(`btn-${tabName}`).classList.remove('bg-white', 'text-gray-600', 'hover:bg-green-50');
+            document.getElementById(`btn-${tabName}`).classList.add('bg-pancasila-green', 'text-white', 'ring-4', 'ring-green-200');
+        }
+
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
